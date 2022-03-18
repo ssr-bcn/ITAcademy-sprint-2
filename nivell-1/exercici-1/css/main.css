@@ -11123,11 +11123,11 @@ h1, .h1, h2, .h2 {
 }
 
 .fs-custom {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 @media (max-width: 575.98px) {
   .fs-custom {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
 

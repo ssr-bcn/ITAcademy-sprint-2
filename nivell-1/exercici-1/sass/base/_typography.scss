@@ -3,9 +3,9 @@ h1, h2 {
 }
 
 .fs-custom {
-  font-size: $h5-font-size;
+  font-size: 1.2rem;
 
   @include media-breakpoint-down(sm) {
-    font-size: $h6-font-size;
+    font-size: .95rem;
   }
 }
