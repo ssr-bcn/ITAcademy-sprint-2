@@ -1,0 +1,11 @@
+h1, h2 {
+  color: #222744;
+}
+
+.fs-custom {
+  font-size: $h5-font-size;
+
+  @include media-breakpoint-down(sm) {
+    font-size: $h6-font-size;
+  }
+}
