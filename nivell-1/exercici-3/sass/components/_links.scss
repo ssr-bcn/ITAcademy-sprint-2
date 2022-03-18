@@ -1,0 +1,40 @@
+%buttons {
+  padding: 10px 32px !important;
+  font-size: .85rem !important;
+}
+
+/* GENERAL *******************************************************************/
+
+a.btn {
+  @extend %buttons;
+  font-weight: 600;
+
+  @include media-breakpoint-down(sm) {
+    padding: 10px 15px !important;
+  }
+
+  .custom-card & {
+    display: block;
+    padding: 10px 15px !important;
+  }
+}
+
+/* HEADER ********************************************************************/
+
+#page-header a.nav-link {
+  @extend %buttons;
+  color: black !important;
+  text-transform: uppercase;
+
+  &.btn {
+    color: white !important;
+  }
+}
+
+/* HERO **********************************************************************/
+
+#hero a {
+  &.btn:last-child {
+    color: $gray-600;
+  }
+}
