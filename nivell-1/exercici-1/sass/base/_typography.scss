@@ -4,6 +4,7 @@ h1, h2 {
 
 .fs-custom {
   font-size: 1.2rem;
+  color: $gray-500 !important;
 
   @include media-breakpoint-down(sm) {
     font-size: .95rem;

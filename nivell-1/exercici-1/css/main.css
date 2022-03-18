@@ -11124,6 +11124,7 @@ h1, .h1, h2, .h2 {
 
 .fs-custom {
   font-size: 1.2rem;
+  color: #adb5bd !important;
 }
 @media (max-width: 575.98px) {
   .fs-custom {
