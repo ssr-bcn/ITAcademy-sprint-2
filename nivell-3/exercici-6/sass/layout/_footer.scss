@@ -1,0 +1,51 @@
+#page-footer {
+  margin-top: 150px;
+  padding: 70px 0 0;
+  background-color: $primary;
+
+  & p, & h2 {
+    color: white;
+  }
+
+  & p {
+    font-size: $font-size-btn;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+
+  & #contact-form {
+    & .form-control {
+      @extend %buttons;
+      flex: 1;
+
+      &::placeholder {
+        color: $gray-400;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: 10px 15px !important;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+
+      & div:last-child, & button {
+        width: 100%;
+      }
+    }
+  }
+
+  nav {
+    margin: 70px 0 0;
+    background-color: #242946;
+
+    & .icon-social {
+      color: white;
+
+      &:last-child {
+        margin-left: 40px;
+      }
+    }
+  }
+}

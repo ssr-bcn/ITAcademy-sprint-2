@@ -1,0 +1,102 @@
+%buttons {
+  padding: 10px 32px !important;
+  font-size: .85rem !important;
+}
+
+%button-mobile {
+  padding: 10px 15px !important;
+}
+
+%nav-link {
+  @extend %buttons;
+
+  text-transform: uppercase;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+/* GENERAL *******************************************************************/
+
+a.btn, #page-footer button {
+  @extend %buttons;
+  border-width: 2px;
+  font-weight: 600 !important;
+
+  @include media-breakpoint-down(sm) {
+    padding: 10px 15px !important;
+  }
+
+  .custom-card & {
+    display: block;
+    padding: 10px 15px !important;
+  }
+
+  &:hover {
+    background-color: white !important;
+    color: $primary;
+  }
+}
+
+/* HEADER ********************************************************************/
+
+#page-header a.nav-link {
+  @extend %nav-link;
+  color: black;
+
+  &.btn {
+    color: white;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+/* HERO **********************************************************************/
+
+#hero a {
+  &.btn:last-child {
+    color: $gray-600;
+  }
+
+  &:hover {
+    &:first-child {
+      color: $primary;
+    }
+
+    &:last-child {
+      border-color: $gray-600;
+    }
+  }
+}
+
+/* FOOTER ********************************************************************/
+
+#page-footer {
+  & button {
+    color: white;
+    white-space: nowrap;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  & a.nav-link {
+    @extend %nav-link;
+    color: white;
+
+    @include media-breakpoint-down(md) {
+      font-size: $font-size-min !important;
+      text-align: center;
+    }
+  }
+
+  & .icon-social {
+    &:hover {
+      color: $secondary;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+#features-tab {
+  & > nav > ul {
+    width: 70%;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+
+    li {
+      flex: 1;
+
+      &:first-child {
+        @include media-breakpoint-down(lg) {
+          border-top: 1px solid #dee2e6 !important;
+        }
+      }
+
+      & a {
+        color: $text-muted;
+
+        @include media-breakpoint-down(lg) {
+          display: inline-block;
+        }
+
+        &.active {
+          color: black;
+          border-bottom-color: $secondary !important;
+        }
+
+        &:not(.active) {
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}

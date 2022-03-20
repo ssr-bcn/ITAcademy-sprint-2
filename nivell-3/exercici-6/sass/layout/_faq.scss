@@ -1,0 +1,32 @@
+#faq {
+  & .accordion-button {
+    color: #222744;
+    padding-left: 0;
+    background-color: transparent;
+
+    @include media-breakpoint-down(sm) {
+      padding-right: 0;
+      font-size: $font-size-min;
+    }
+
+    &::after {
+      background-image: url('../img/icon-arrow.svg');
+      background-position: center;
+    }
+
+    &:not(.collapsed) {
+      &::after {
+        background-image: url('../img/icon-arrow-secondary.svg');
+      }
+    }
+
+    &:hover {
+      color: $secondary;
+    }
+
+    &:focus {
+      border: 0;
+      box-shadow: none;
+    }
+  }
+}

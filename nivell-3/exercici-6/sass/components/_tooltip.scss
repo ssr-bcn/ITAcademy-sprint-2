@@ -1,0 +1,30 @@
+%feedback {
+  z-index: 0;
+  margin: -5px 0 0;
+  width: 100%;
+  padding: 10px 10px 5px;
+  border-radius: 4px;
+  color: white;
+  font-size: .7rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#contact-form {
+  &.was-validated {
+    & .form-control {
+      &:invalid {
+        position: relative;
+        z-index: 1;
+        border-width: 2px;
+        border-color: $secondary;
+      }
+    }
+  }
+
+  & .invalid-feedback {
+    @extend %feedback;
+
+    background-color: $secondary;
+  }
+}

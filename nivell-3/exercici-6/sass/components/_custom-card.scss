@@ -1,0 +1,44 @@
+%custom-card {
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 1rem rgba($primary, 0.15) !important;
+}
+
+.custom-card {
+  @extend %custom-card;
+
+  & > img {
+    margin: 30px auto;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  & .card-text {
+    font-size: $font-size-min;
+  }
+
+  &-footer {
+    margin-top: 24px;
+    padding: 24px;
+    background: url('../img/bg-dots.svg') left top repeat-x;
+  }
+
+  &:nth-child(1) {
+    align-self: flex-start;
+  }
+
+  &:nth-child(2) {
+    align-self: center;;
+  }
+
+  &:nth-child(3) {
+    align-self: flex-end;
+    margin-top: 80px;
+
+    @include media-breakpoint-down(md) {
+      margin: 0;
+    }
+  }
+}
