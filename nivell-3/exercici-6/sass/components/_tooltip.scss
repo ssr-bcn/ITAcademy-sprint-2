@@ -10,13 +10,17 @@
   font-weight: bold;
 }
 
+%form-control {
+  position: relative;
+  z-index: 1;
+  border-width: 2px;
+}
+
 #contact-form {
   &.was-validated {
     & .form-control {
       &:invalid {
-        position: relative;
-        z-index: 1;
-        border-width: 2px;
+        @extend %form-control;
         border-color: $secondary;
       }
     }
@@ -24,7 +28,21 @@
 
   & .invalid-feedback {
     @extend %feedback;
-
     background-color: $secondary;
+  }
+
+  &.was-validated {
+    & .form-control {
+      &:valid {
+        @extend %form-control;
+        border-color: #198754;
+      }
+    }
+  }
+
+  & .valid-feedback {
+    @extend %feedback;
+
+    background-color: #198754;
   }
 }

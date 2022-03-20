@@ -18136,7 +18136,7 @@ a.btn:hover, #page-footer button:hover {
   }
 }
 
-#contact-form .invalid-feedback {
+#contact-form .valid-feedback, #contact-form .invalid-feedback {
   z-index: 0;
   margin: -5px 0 0;
   width: 100%;
@@ -18148,14 +18148,23 @@ a.btn:hover, #page-footer button:hover {
   font-weight: bold;
 }
 
-#contact-form.was-validated .form-control:invalid {
+#contact-form.was-validated .form-control:valid, #contact-form.was-validated .form-control:invalid {
   position: relative;
   z-index: 1;
   border-width: 2px;
+}
+
+#contact-form.was-validated .form-control:invalid {
   border-color: #FA5959;
 }
 #contact-form .invalid-feedback {
   background-color: #FA5959;
+}
+#contact-form.was-validated .form-control:valid {
+  border-color: #198754;
+}
+#contact-form .valid-feedback {
+  background-color: #198754;
 }
 
 /*# sourceMappingURL=main.css.map */
