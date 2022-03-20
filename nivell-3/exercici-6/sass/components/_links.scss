@@ -95,6 +95,8 @@ a.btn, #page-footer button {
   }
 
   & .icon-social {
+    text-decoration: none;
+    
     &:hover {
       color: $secondary;
     }
