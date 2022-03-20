@@ -1,0 +1,15 @@
+#faq {
+  & .accordion-button {
+    padding-left: 0;
+
+    @include media-breakpoint-down(sm) {
+      padding-right: 0;
+      font-size: $font-size-min;
+    }
+
+    &::after {
+      background-image: url('../img/icon-arrow.svg');
+      background-position: center;
+    }
+  }
+}
